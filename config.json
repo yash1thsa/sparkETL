@@ -1,0 +1,5 @@
+{
+  "app_name": "marketingETL",
+  "source_data_path": "data/" ,
+  "target_data_path": "output/marketing"
+}
