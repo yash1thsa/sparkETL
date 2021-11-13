@@ -1,36 +1,44 @@
+import datetime
 from dataclasses import dataclass
+from numpy import int32
+
 
 @dataclass
-class marketRecord:
-    ID: String
-    Year_Birth: string
-root
- |-- ID: string (nullable = true)
- |-- Year_Birth: string (nullable = true)
- |-- Education: string (nullable = true)
- |-- Marital_Status: string (nullable = true)
- |-- Income: string (nullable = true)
- |-- Kidhome: string (nullable = true)
- |-- Teenhome: string (nullable = true)
- |-- Dt_Customer: string (nullable = true)
- |-- Recency: string (nullable = true)
- |-- MntWines: string (nullable = true)
- |-- MntFruits: string (nullable = true)
- |-- MntMeatProducts: string (nullable = true)
- |-- MntFishProducts: string (nullable = true)
- |-- MntSweetProducts: string (nullable = true)
- |-- MntGoldProds: string (nullable = true)
- |-- NumDealsPurchases: string (nullable = true)
- |-- NumWebPurchases: string (nullable = true)
- |-- NumCatalogPurchases: string (nullable = true)
- |-- NumStorePurchases: string (nullable = true)
- |-- NumWebVisitsMonth: string (nullable = true)
- |-- AcceptedCmp3: string (nullable = true)
- |-- AcceptedCmp4: string (nullable = true)
- |-- AcceptedCmp5: string (nullable = true)
- |-- AcceptedCmp1: string (nullable = true)
- |-- AcceptedCmp2: string (nullable = true)
- |-- Complain: string (nullable = true)
- |-- Z_CostContact: string (nullable = true)
- |-- Z_Revenue: string (nullable = true)
+class MarketRecord:
+    ID: str
+    Year_Birth: str
+    Education: str
+    Marital_Status: str
+    Income: str
+    Kidhome: str
+    Teenhome: str
+    Dt_Customer: str
+    Recency: str
+    MntWines: str
+    MntFruits: str
+    MntMeatProducts: str
+    MntFishProducts: str
+    MntSweetProducts: str
+    MntGoldProds: str
+    NumDealsPurchases: str
+    NumWebPurchases: str
+    NumCatalogPurchases: str
+    NumStorePurchases: str
+    NumWebVisitsMonth: str
+    AcceptedCmp3: str
+    AcceptedCmp4: str
+    AcceptedCmp5: str
+    AcceptedCmp1: str
+    AcceptedCmp2: str
+    Complain: str
+    Z_CostContact: str
+    Z_Revenue: str
+    Responses: str
 
+
+@dataclass
+class MarketOutputRecord:
+    id: int32
+    education: str
+    marital_status: str
+    snapshot_dt: datetime.datetime
