@@ -3,11 +3,10 @@ from pyspark.sql.types import IntegerType
 
 
 def _extract_data(spark, config):
-    src_df = spark.read.option("header", "True")\
+    return spark.read.option("header", "True")\
         .option("delimiter", "\t")\
         .csv(config['source_data_path'])
-    src_df
-    return src_df
+
 
 
 def _transform_data(data_df):

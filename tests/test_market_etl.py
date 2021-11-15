@@ -1,5 +1,5 @@
 import pytest
-from jobs import marketETL
+from jobs import market_etl
 from model import market_record
 import datetime
 from pyspark_test import assert_pyspark_df_equal
@@ -19,7 +19,7 @@ class TestMaketETLJob:
             ]
         )
 
-        actual_df = marketETL._transform_data(test_data)
+        actual_df = market_etl._transform_data(test_data)
         expected_df = spark_session_builder.createDataFrame(
             [market_record.MarketOutputRecord(5524, "Graduation", "Single", datetime.date.today())]
         ).withColumn("id", col("id").cast(IntegerType()))
