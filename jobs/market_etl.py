@@ -8,7 +8,6 @@ def _extract_data(spark, config):
         .csv(config['source_data_path'])
 
 
-
 def _transform_data(data_df):
     final_df = data_df.withColumn("snapshot_dt", current_date())\
         .select(col("ID").cast(IntegerType()).alias("id"),

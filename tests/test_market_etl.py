@@ -6,7 +6,7 @@ from pyspark.sql.functions import col
 from pyspark.sql.types import IntegerType
 
 
-class TestMaketETLJob:
+class TestMarketETLJob:
 
     def test_transform_data(self, spark_session_builder):
 
