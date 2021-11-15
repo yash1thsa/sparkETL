@@ -1,4 +1,3 @@
-import pytest
 from jobs import market_etl
 from model import market_record
 import datetime
